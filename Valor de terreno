@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float area,ValorTerrenoSul, ValorTerrenoNorte, ValorTerrenoQuarteiraoSul, ValorTerrenoQuarteiraoNorte,
+valorcomacrescimo1, valorcomacrescimo2, valorcomacrescimo3, valorcomacrescimo4, acrescimo1, acrescimo2,
+acrescimo3, acrescimo4;
+    printf("Informe a area do terreno (m2): ");
+    scanf("%f",&area);
+   
+    ValorTerrenoSul = (area * 150);
+    printf("O valor da area será de : %.2f\n",ValorTerrenoSul);
+    ValorTerrenoNorte = (area * 100);
+    printf("O valor da area norte será de: %.2f\n",ValorTerrenoNorte);
+    ValorTerrenoQuarteiraoSul = (ValorTerrenoSul + 600);
+    printf("O valor do Quarteirão na região Sul será de: %.2f\n",ValorTerrenoQuarteiraoSul);
+    ValorTerrenoQuarteiraoNorte = (ValorTerrenoNorte + 600);
+    printf("O valor do Quarteirao na região Norte será de: %.2f\n",ValorTerrenoQuarteiraoNorte);
+
+    if (area > 400);
+    acrescimo1 = (ValorTerrenoSul * 0.25);
+    valorcomacrescimo1= (ValorTerrenoSul + acrescimo1);
+    acrescimo2 = (ValorTerrenoNorte * 0.25);
+    valorcomacrescimo2 = (ValorTerrenoNorte + acrescimo2);
+    acrescimo3 = (ValorTerrenoQuarteiraoSul * 0.25);
+    valorcomacrescimo3 = (ValorTerrenoQuarteiraoSul + acrescimo3);
+    acrescimo4 = (ValorTerrenoQuarteiraoNorte * 0.25);
+    valorcomacrescimo4 = (ValorTerrenoQuarteiraoNorte + acrescimo4);
+    printf("O valor da area acima de 400m2 na região sul será de: %.2f\n",valorcomacrescimo1);
+    printf("O valor da area acima de 400m2 na região norte será de: %.2f\n",valorcomacrescimo2);
+    printf("O valor da area acima de 400m2 no quarteirão Sul será de: %.2f\n",valorcomacrescimo3);
+    printf("O valor da area acima de 400m2 no quarteirão Norte será de: %.2f\n",valorcomacrescimo4);
+
+return 0;
+}

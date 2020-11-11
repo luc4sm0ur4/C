@@ -1,35 +1,43 @@
-#include<stdio.h>
-#include<math.h>
+//Lucas Carvalho da Luz Moura
+#include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
-    float area,ValorTerrenoSul, ValorTerrenoNorte, ValorTerrenoQuarteiraoSul, ValorTerrenoQuarteiraoNorte,
-valorcomacrescimo1, valorcomacrescimo2, valorcomacrescimo3, valorcomacrescimo4, acrescimo1, acrescimo2,
-acrescimo3, acrescimo4;
-    printf("Informe a area do terreno (m2): ");
-    scanf("%f",&area);
-   
-    ValorTerrenoSul = (area * 150);
-    printf("O valor da area será de : %.2f\n",ValorTerrenoSul);
-    ValorTerrenoNorte = (area * 100);
-    printf("O valor da area norte será de: %.2f\n",ValorTerrenoNorte);
-    ValorTerrenoQuarteiraoSul = (ValorTerrenoSul + 600);
-    printf("O valor do Quarteirão na região Sul será de: %.2f\n",ValorTerrenoQuarteiraoSul);
-    ValorTerrenoQuarteiraoNorte = (ValorTerrenoNorte + 600);
-    printf("O valor do Quarteirao na região Norte será de: %.2f\n",ValorTerrenoQuarteiraoNorte);
 
-    if (area > 400);
-    acrescimo1 = (ValorTerrenoSul * 0.25);
-    valorcomacrescimo1= (ValorTerrenoSul + acrescimo1);
-    acrescimo2 = (ValorTerrenoNorte * 0.25);
-    valorcomacrescimo2 = (ValorTerrenoNorte + acrescimo2);
-    acrescimo3 = (ValorTerrenoQuarteiraoSul * 0.25);
-    valorcomacrescimo3 = (ValorTerrenoQuarteiraoSul + acrescimo3);
-    acrescimo4 = (ValorTerrenoQuarteiraoNorte * 0.25);
-    valorcomacrescimo4 = (ValorTerrenoQuarteiraoNorte + acrescimo4);
-    printf("O valor da area acima de 400m2 na região sul será de: %.2f\n",valorcomacrescimo1);
-    printf("O valor da area acima de 400m2 na região norte será de: %.2f\n",valorcomacrescimo2);
-    printf("O valor da area acima de 400m2 no quarteirão Sul será de: %.2f\n",valorcomacrescimo3);
-    printf("O valor da area acima de 400m2 no quarteirão Norte será de: %.2f\n",valorcomacrescimo4);
+   int regiao;
+   int local;
+   float tamanho, valor;
 
-return 0;
+   printf("Qual região fica o terreno? Norte-1 ou Sul-2\n");
+   scanf("%d", &regiao);
+   printf("O terreno e de esquina? Sim-1 ou Não-2 \n");
+   scanf("%d", &local);
+   printf("Digite o tamanho do terreno(m²):\n");
+   scanf("%f", &tamanho);
+
+    if(regiao == 2)
+    {
+     valor = tamanho * 150;
+    }
+
+    else
+    {
+     valor = tamanho * 100;
+    }
+
+    if(tamanho > 400)
+    {
+     valor = valor * 1.25;
+    }
+
+    if(local == 1)
+    {
+     valor = valor + 600;
+    }
+  
+  printf("\n O valor final do terreno será de: R$ %.2f \n", valor);
+  printf("\n Programa Finalizado \n\n");
+  
+  system("pause");
 }

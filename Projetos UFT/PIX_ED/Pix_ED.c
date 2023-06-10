@@ -1,5 +1,5 @@
 #include <stdio.h> 
-#include "PixED.h" 
+#include "Pix_ED.h" 
 void inicializa(PixED *conta, int pix, double saldo) { 
 /*quando a variável é ponteiro pode-se usar a -> */ 
  conta->pix = pix; 
